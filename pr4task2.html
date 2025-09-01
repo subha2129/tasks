@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2: Validate Email</title>
+</head>
+<body>
+  <h2>Task 2: Validate Email Field</h2>
+  
+  <input type="text" id="email" placeholder="Enter your email">
+  <button onclick="validateEmail()">Validate</button>
+  
+  <p id="result"></p>
+
+  <script>
+    function validateEmail() {
+      let email = document.getElementById("email").value.trim();
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // simple regex
+      
+      if (emailPattern.test(email)) {
+        document.getElementById("result").innerText = email + " is valid.";
+      } else {
+        document.getElementById("result").innerText = "Invalid email format.";
+      }
+    }
+  </script>
+</body>
+</html>
