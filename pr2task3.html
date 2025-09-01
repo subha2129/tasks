@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3: Guess Until Correct</title>
+</head>
+<body>
+  <h2>Task 3: Keep Guessing Until Correct</h2>
+
+  <p>Guess a number between 1 and 100:</p>
+  <input type="number" id="userGuess" placeholder="Enter a number">
+  <button onclick="checkGuess()">Guess</button>
+  
+  <p id="result"></p>
+
+  <script>
+    let secretNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkGuess() {
+      let guess = parseInt(document.getElementById("userGuess").value);
+
+      if (guess < secretNumber) {
+        document.getElementById("result").innerText = "Too Low! Try again.";
+      } else if (guess > secretNumber) {
+        document.getElementById("result").innerText = "Too High! Try again.";
+      } else {
+        document.getElementById("result").innerText = "Correct! 🎉 You guessed it.";
+      }
+    }
+  </script>
+</body>
+</html>
