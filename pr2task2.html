@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2: Compare Number</title>
+</head>
+<body>
+  <h2>Task 2: Compare User Input</h2>
+
+  <p>Guess the number (predefined as 50):</p>
+  <input type="number" id="userGuess" placeholder="Enter a number">
+  <button onclick="checkGuess()">Check</button>
+  
+  <p id="result"></p>
+
+  <script>
+    let predefined = 50;
+
+    function checkGuess() {
+      let guess = parseInt(document.getElementById("userGuess").value);
+      
+      if (guess < predefined) {
+        document.getElementById("result").innerText = "Too Low";
+      } else if (guess > predefined) {
+        document.getElementById("result").innerText = "Too High";
+      } else {
+        document.getElementById("result").innerText = "Correct!";
+      }
+    }
+  </script>
+</body>
+</html>
