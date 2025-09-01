@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2: Remove Duplicates</title>
+</head>
+<body>
+  <h2>Task 2: Remove Duplicates from Array</h2>
+  
+  <input type="text" id="arrayInput" placeholder="Enter numbers e.g. 1,2,2,3,4">
+  <button onclick="removeDuplicates()">Remove</button>
+  
+  <p id="result"></p>
+
+  <script>
+    function removeDuplicates() {
+      let input = document.getElementById("arrayInput").value;
+      let arr = input.split(",").map(Number); 
+      let unique = [...new Set(arr)];
+      document.getElementById("result").innerText = "Unique Array: [" + unique.join(", ") + "]";
+    }
+  </script>
+</body>
+</html>
