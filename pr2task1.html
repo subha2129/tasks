@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1: Random Number</title>
+</head>
+<body>
+  <h2>Task 1: Generate a Random Number (1–100)</h2>
+  <button onclick="generateRandom()">Generate</button>
+  <p id="result"></p>
+
+  <script>
+    function generateRandom() {
+      let randomNum = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("result").innerText = 
+        "Random Number: " + randomNum;
+    }
+  </script>
+</body>
+</html>
