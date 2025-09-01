@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3: Validate Password</title>
+</head>
+<body>
+  <h2>Task 3: Validate Password Field</h2>
+  
+  <input type="password" id="password" placeholder="Enter your password">
+  <button onclick="validatePassword()">Validate</button>
+  
+  <p id="result"></p>
+
+  <script>
+    function validatePassword() {
+      let password = document.getElementById("password").value;
+      
+      if (password.length < 8) {
+        document.getElementById("result").innerText = "Password must be at least 8 characters long.";
+      } else if (!/[A-Z]/.test(password)) {
+        document.getElementById("result").innerText = "Password must contain at least one uppercase letter.";
+      } else if (!/[0-9]/.test(password)) {
+        document.getElementById("result").innerText = "Password must contain at least one number.";
+      } else {
+        document.getElementById("result").innerText = "Password is valid.";
+      }
+    }
+  </script>
+</body>
+</html>
