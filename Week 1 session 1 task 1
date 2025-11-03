@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Variables Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f7;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+      margin: auto;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript Variable Example</h1>
+    <p>Open the <strong>Console</strong> (Press F12 → Console tab) to see the output.</p>
+    <button onclick="showVariables()">Run Program</button>
+  </div>
+
+  <script>
+    function showVariables() {
+      
+      var name = "Subha";
+      console.log("Using var:", name);
+      name = "Subha Devi";
+      console.log("Modified var:", name);
+
+      
+      let age = 20;
+      console.log("Using let:", age);
+      age = 21;
+      console.log("Modified let:", age);
+
+    
+      const country = "India";
+      console.log("Using const:", country);
+
+      console.log("✅ Program finished successfully!");
+    }
+  </script>
+</body>
+</html>
