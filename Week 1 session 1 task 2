@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Data Types & Type Conversion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      background-color: white;
+      width: 400px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    pre {
+      text-align: left;
+      background-color: #f9fafb;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript Data Types & Type Conversion</h1>
+    <p>Click the button below to see different data types and conversions.</p>
+    <button onclick="showDataTypes()">Run Script</button>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    function showDataTypes() {
+      let output = "";
+
+      
+      let num = 42; // Number
+      let str = "Hello"; // String
+      let bool = true; // Boolean
+      let empty = null; // Null
+      let notDefined; // Undefined
+      let obj = {name: "Subha", age: 21}; // Object
+      let sym = Symbol("id"); // Symbol
+
+      output += "=== Data Types ===\n";
+      output += `Number: ${num}\n`;
+      output += `String: ${str}\n`;
+      output += `Boolean: ${bool}\n`;
+      output += `Null: ${empty}\n`;
+      output += `Undefined: ${notDefined}\n`;
+      output += `Object: ${JSON.stringify(obj)}\n`;
+      output += `Symbol: ${sym.toString()}\n\n`;
+
+      console.log("=== Data Types ===");
+      console.log(num, str, bool, empty, notDefined, obj, sym);
+
+      
+      output += "=== Explicit Type Conversion ===\n";
+      let numToStr = String(num);
+      let strToNum = Number("123");
+      let boolToStr = String(bool);
+      let strToBool = Boolean("Hello");
+
+      output += `Number to String: ${numToStr} (type: ${typeof numToStr})\n`;
+      output += `String to Number: ${strToNum} (type: ${typeof strToNum})\n`;
+      output += `Boolean to String: ${boolToStr} (type: ${typeof boolToStr})\n`;
+      output += `String to Boolean: ${strToBool} (type: ${typeof strToBool})\n\n`;
+
+      
+      output += "=== Implicit Type Conversion ===\n";
+      let result1 = "5" + 10; // String + Number = String
+      let result2 = "5" - 2; // String - Number = Number
+      let result3 = true + 1; // Boolean + Number = Number
+
+      output += `"5" + 10 = ${result1} (type: ${typeof result1})\n`;
+      output += `"5" - 2 = ${result2} (type: ${typeof result2})\n`;
+      output += `true + 1 = ${result3} (type: ${typeof result3})\n`;
+
+      console.log("=== Type Conversions ===");
+      console.log({numToStr, strToNum, result1, result2, result3});
+
+      document.getElementById("output").textContent = output;
+    }
+  </script>
+</body>
+</html>
