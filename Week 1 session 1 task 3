@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Operators Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      background-color: white;
+      width: 450px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    pre {
+      text-align: left;
+      background-color: #f9fafb;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript Operators Demo</h1>
+    <p>Click below to see examples of all operator types.</p>
+    <button onclick="showOperators()">Run Script</button>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    function showOperators() {
+      let output = "";
+
+    
+      let a = 10, b = 3;
+      output += "=== Arithmetic Operators ===\n";
+      output += `a + b = ${a + b}\n`;
+      output += `a - b = ${a - b}\n`;
+      output += `a * b = ${a * b}\n`;
+      output += `a / b = ${a / b}\n`;
+      output += `a % b = ${a % b}\n\n`;
+
+      
+      let x = 5;
+      x += 3; // same as x = x + 3
+      output += "=== Assignment Operator ===\n";
+      output += `x += 3 → x = ${x}\n\n`;
+
+      
+      let p = 10, q = 20;
+      output += "=== Relational Operators ===\n";
+      output += `p == q → ${p == q}\n`;
+      output += `p != q → ${p != q}\n`;
+      output += `p > q → ${p > q}\n`;
+      output += `p < q → ${p < q}\n`;
+      output += `p >= 10 → ${p >= 10}\n`;
+      output += `q <= 15 → ${q <= 15}\n\n`;
+
+      
+      let cond1 = true, cond2 = false;
+      output += "=== Logical Operators ===\n";
+      output += `cond1 && cond2 → ${cond1 && cond2}\n`;
+      output += `cond1 || cond2 → ${cond1 || cond2}\n`;
+      output += `!cond1 → ${!cond1}\n\n`;
+
+      
+      let age = 18;
+      let result = (age >= 18) ? "Eligible to Vote" : "Not Eligible";
+      output += "=== Conditional (Ternary) Operator ===\n";
+      output += `Age = ${age}, Result → ${result}\n\n`;
+
+      
+      let m = 5, n = 1;
+      output += "=== Bitwise Operators ===\n";
+      output += `m & n = ${m & n}\n`;
+      output += `m | n = ${m | n}\n`;
+      output += `m ^ n = ${m ^ n}\n`;
+      output += `m << 1 = ${m << 1}\n`;
+      output += `m >> 1 = ${m >> 1}\n\n`;
+
+      
+      let num = 10;
+      output += "=== Increment & Decrement ===\n";
+      output += `num++ = ${num++} (after increment → ${num})\n`;
+      output += `++num = ${++num}\n`;
+      output += `num-- = ${num--} (after decrement → ${num})\n`;
+      output += `--num = ${--num}\n`;
+
+      
+      document.getElementById("output").textContent = output;
+      console.log(output);
+    }
+  </script>
+</body>
+</html>
